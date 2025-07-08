@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "SynoSend",
+  "version": "1.1",
+  "description": "Right-click to send links, images, or videos to Synology Download Station.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://*/",
+    "https://*/"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_icon": {
+      "48": "icons/synosend_icon_48.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "48": "icons/synosend_icon_48.png",
+    "128": "icons/synosend_icon_128.png"
+  }
+}

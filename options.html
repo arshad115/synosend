@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SynoSend Settings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #ffffff;
+      padding: 32px;
+      margin: 0 auto;
+      max-width: 420px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    #save {
+      background: #007bff;
+      color: white;
+    }
+
+    #save:hover {
+      background: #0056b3;
+    }
+
+    #test {
+      background-color: #6c757d;
+      color: white;
+      margin-top: 12px;
+    }
+
+    #test:hover {
+      background-color: #5a6268;
+    }
+
+    #status, #testStatus {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    #status {
+      color: #28a745;
+    }
+
+    #testStatus {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>SynoSend NAS Settings</h2>
+  <input type="text" id="nasUrl" placeholder="https://your-nas.local:5001" />
+  <input type="text" id="username" placeholder="Username" />
+  <input type="password" id="password" placeholder="Password" />
+  <input type="text" id="downloadLocation" placeholder="Downloads (default)" />
+  <button id="save">Save</button>
+  <div id="status"></div>
+
+  <button id="test">Test Connection</button>
+  <div id="testStatus"></div>
+
+  <script type="module" src="options.js"></script>
+
+</body>
+</html>
